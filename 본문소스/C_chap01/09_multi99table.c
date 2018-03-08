@@ -4,7 +4,7 @@
 int main(void)
 {
 	int i, j;
-	printf("----- °ö¼À ±¸±¸Ç¥ -----\n");
+	printf("----- °ö¼ÀÇ¥ -----\n");
 	
 	for (i = 1; i <= 9; i++) {
 		for (j = 1; j <= 9; j++)
