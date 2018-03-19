@@ -1,12 +1,12 @@
-ï»¿/* ë°°ì—´ ìš”ì†Œì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤(ê°’ì„ ì…ë ¥í•©ë‹ˆë‹¤). */
+/* ¹è¿­ ¿ä¼ÒÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù(°ªÀ» ÀÔ·ÂÇÕ´Ï´Ù). */
 #include <stdio.h>
 #include <stdlib.h>
 
-/*--- ìš”ì†Ÿìˆ˜ê°€ nì¸ ë°°ì—´ aì˜ ìš”ì†Œì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤. ---*/
+/*--- ¿ä¼Ú¼ö°¡ nÀÎ ¹è¿­ aÀÇ ¿ä¼ÒÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù. ---*/
 int maxof(const int a[], int n)
 {
 	int i;
-	int max = a[0]; 		/* ìµœëŒ“ê°’ */
+	int max = a[0]; 		/* ÃÖ´ñ°ª */
 
 	for (i = 1; i < n; i++)
 		if (a[i] > max) max = a[i];
@@ -17,21 +17,21 @@ int maxof(const int a[], int n)
 int main(void)
 {
 	int i;
-	int *height;			/* ë°°ì—´ì˜ ì²« ë²ˆì§¸ ìš”ì†Œì˜ í¬ì¸í„° */
-	int number;				/* ì¸ì› = ë°°ì—´ â€‹â€‹heightì˜ ìš”ì†Œ ê°œìˆ˜ */
-	printf("ì‚¬ëŒ ìˆ˜ : ");
+	int *height;			/* ¹è¿­ÀÇ Ã¹ ¹øÂ° ¿ä¼ÒÀÇ Æ÷ÀÎÅÍ */
+	int number;				/* ÀÎ¿ø = ¹è¿­ ??heightÀÇ ¿ä¼Ò °³¼ö */
+	printf("»ç¶÷ ¼ö : ");
 	scanf("%d", &number);
-	height = calloc(number, sizeof(int));	/* ìš”ì†Ÿìˆ˜ê°€ numberê°œì¸ ë°°ì—´ì„ ìƒì„± */
+	height = calloc(number, sizeof(int));	/* ¿ä¼Ú¼ö°¡ number°³ÀÎ ¹è¿­À» »ı¼º */
 
-	printf("%d ì‚¬ëŒì˜ í‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”.\n", number);
+	printf("%d »ç¶÷ÀÇ Å°¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n", number);
 	for (i = 0; i < number; i++) {
 		printf("height[%d] : ", i);
 		scanf("%d", &height[i]);
 	}
 
-	printf("ìµœëŒ“ê°’ì€ %dì…ë‹ˆë‹¤.\n", maxof(height, number));
+	printf("ÃÖ´ñ°ªÀº %dÀÔ´Ï´Ù.\n", maxof(height, number));
 	
-	free(height); 				/* ë°°ì—´ heightë¥¼ í•´ì œ */
+	free(height); 				/* ¹è¿­ height¸¦ ÇØÁ¦ */
 
 	return 0;
 }
