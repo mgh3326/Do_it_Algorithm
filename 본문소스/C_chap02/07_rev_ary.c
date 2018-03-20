@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /*--- type형의 x와 y 값을 교환 ---*/
-#define swap(type, x, y) do { type t = x; x = y; y = t;} while (0)
+#define swap(type, x, y) do { type t = x; x = y; y = t;} while (0)//이거 신기 방기
 
 /*--- 요소 개수가 n인 배열 a의 요소를 역순으로 정렬 ---*/
 void ary_reverse(int a[], int n)
