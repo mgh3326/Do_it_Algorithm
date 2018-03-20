@@ -1,13 +1,13 @@
-ï»¿/* ë°°ì—´ ìš”ì†Œì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤(ê°’ì„ ë‚œìˆ˜ë¡œ ìƒì„±). */
+/* ¹è¿­ ¿ä¼ÒÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù(°ªÀ» ³­¼ö·Î »ı¼º). */
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/*--- ìš”ì†Ÿìˆ˜ê°€ nì¸ ë°°ì—´ aì˜ ìš”ì†Œì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤. ---*/
+/*--- ¿ä¼Ú¼ö°¡ nÀÎ ¹è¿­ aÀÇ ¿ä¼ÒÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù. ---*/
 int maxof(const int a[], int n)
 {
 	int i;
-	int max = a[0]; 		/* ìµœëŒ“ê°’ */
+	int max = a[0]; 		/* ÃÖ´ñ°ª */
 	for (i = 1; i < n; i++)
 		if (a[i]> max) max = a[i];
 	return max;
@@ -16,22 +16,22 @@ int maxof(const int a[], int n)
 int main(void)
 {
 	int i;
-	int *height; 		/* ë°°ì—´ì˜ ì²« ë²ˆì§¸ ìš”ì†Œì˜ í¬ì¸í„° */
-	int number; 		/* ì‚¬ëŒ ìˆ˜ = ë°°ì—´ â€‹â€‹heightì˜ ìš”ì†Ÿìˆ˜ */
-	printf("ì‚¬ëŒ ìˆ˜ : ");
+	int *height; 		/* ¹è¿­ÀÇ Ã¹ ¹øÂ° ¿ä¼ÒÀÇ Æ÷ÀÎÅÍ */
+	int number; 		/* »ç¶÷ ¼ö = ¹è¿­ ??heightÀÇ ¿ä¼Ú¼ö */
+	printf("»ç¶÷ ¼ö : ");
 	scanf("%d", &number);
 
-	height = calloc(number, sizeof(int));		/* ìš”ì†Ÿìˆ˜ê°€ numberì¸ ë°°ì—´ì„ ìƒì„± */
+	height = calloc(number, sizeof(int));		/* ¿ä¼Ú¼ö°¡ numberÀÎ ¹è¿­À» »ı¼º */
 
-	srand(time(NULL));							/* ì‹œê°„ìœ¼ë¡œ ë‚œìˆ˜ì˜ seed(ì”¨ì•—)ì„ ì´ˆê¸°í™” */
+	srand(time(NULL));							/* ½Ã°£À¸·Î ³­¼öÀÇ seed(¾¾¾Ñ)À» ÃÊ±âÈ­ */
 	for (i = 0; i < number; i++) {
-		height[i] = 100 + rand() % 90;			/* 100 ~ 189ì˜ ë‚œìˆ˜ë¥¼ ìƒì„± Â· ëŒ€ì… */
+		height[i] = 100 + rand() % 90;			/* 100 ~ 189ÀÇ ³­¼ö¸¦ »ı¼º ¡¤ ´ëÀÔ */
 		printf("height[%d] = %d\n", i, height[i]);
 	}
 
-	printf("ìµœëŒ“ê°’ì€ %dì…ë‹ˆë‹¤.\n", maxof(height, number));
+	printf("ÃÖ´ñ°ªÀº %dÀÔ´Ï´Ù.\n", maxof(height, number));
 	
-	free(height); 			/* ë°°ì—´ heightë¥¼ í•´ì œ */
+	free(height); 			/* ¹è¿­ height¸¦ ÇØÁ¦ */
 
 	return 0;
 }
